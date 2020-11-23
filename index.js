@@ -47,11 +47,11 @@ app.use(bodyParser.json())
     app.listen('https://nameless-wildwood-48294.herokuapp.com/');
 
 
-// // this is going to be our node api using vainllah JS :)
+// // this is going to be our node api using vanilla JS :)
 // const server = http.createServer( (request, response) => {
     
     
-//     //challenge: return a different responsed based on what the urls is in the request
+//     //challenge: return a different responses based on what the urls is in the request
 //     if (request.url == '/something') {        
 //         // we need to send something in the response
 //         response.end('hello from my node api i just created :) ')
