@@ -4,8 +4,9 @@ const mongoClient = mongodb.MongoClient;
 require('dotenv').config()
 
 let dbName = "_golfCourses";
+
 // connection string
-const uri = "mongodb+srv://thisisatest:thisisatest@cluster0.lsfrb.mongodb.net/_golfCourses?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URL;
 const getCollectionDocuments = async (collectionName) => {
     // Connect to our database / open our connection
     try{
