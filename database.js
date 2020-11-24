@@ -2,6 +2,7 @@
 const mongodb = require('mongodb')
 const mongoClient = mongodb.MongoClient;
 require('dotenv').config()
+console.log(process.env)
 
 let dbName = "_golfCourses";
 
