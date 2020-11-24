@@ -9,12 +9,17 @@ let dbName = "_golfCourses";
 const uri = "mongodb+srv://thisisatest:thisisatest@cluster0.lsfrb.mongodb.net/_golfCourses?retryWrites=true&w=majority";
 const getCollectionDocuments = async (collectionName) => {
     // Connect to our database / open our connection
-    const mongo = await mongoClient.connect(uri, { useUnifiedTopology: true })
+    try{
+        const mongo = await mongoClient.connect(uri, { useUnifiedTopology: true })
     // Retrieve our collection
     const dataCollection = await mongo.db(dbName).collection(collectionName).find({}).toArray();
     // Close our connection
     mongo.close();
     return dataCollection;
+    } catch(e) {
+        console.log(e)
+        return []
+    }
 }
 const createCollectionDocument = async (collectionName, data) => {
     // Connect to our database / open our connection
