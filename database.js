@@ -1,12 +1,11 @@
 // Use ES6 Imports for mongodb and our mongo client
 const mongodb = require('mongodb')
 const mongoClient = mongodb.MongoClient;
-// ************************************************
-// HEY YOU! REPLACE "andys_db" below with the name of your database!!!!
-// ************************************************
+require('dotenv').config()
+
 let dbName = "_golfCourses";
 // connection string
-const uri = "mongodb+srv://thisisatest:thisisatest@cluster0.lsfrb.mongodb.net/_golfCourses?retryWrites=true&w=majority";
+const uri = "mongodb+srv://thisisatest:process.env.MONGO_PASS@cluster0.lsfrb.mongodb.net/_golfCourses?retryWrites=true&w=majority";
 const getCollectionDocuments = async (collectionName) => {
     // Connect to our database / open our connection
     try{
