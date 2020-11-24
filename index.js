@@ -44,7 +44,7 @@ app.use(bodyParser.json())
 
 
     //listen on port 8090
-    app.listen(process.env.port || 8090 );
+    app.listen(process.env.PORT || 8090 );
 
 
 // // this is going to be our node api using vanilla JS :)
